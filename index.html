@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AVATAR GENERATOR</title>
+</head>
+<body>
+
+<section>
+	<h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY!</h1>	
+	<div>
+		<div class="details">
+			<label>ENTER YOUR NAME</label>
+			<input type="text" name="" id="nameid">	
+		</div>
+
+		<div class="imgdiv">
+			<img src="img.jpg" width="200" height="200" id="imgChange">
+		</div>
+
+		<button>Click Me</button>
+		
+	</div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$('button').click(function(){
+			const name = $('#nameid').val();
+			alert(name);
+			$('#imgChange').attr('src', `https://joeschmoe.io/api/v1/${name}`);
+		})
+	});
+</script>
+
+</body>
+</html>
